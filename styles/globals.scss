@@ -1,0 +1,83 @@
+@font-face {
+  font-family: 'Lato';
+  src: url('../public/fonts/Lato-Medium.ttf');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('../public/fonts/Lato-Regular.ttf');
+  font-weight: 400;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+:root {
+  text-rendering: optimizeLegibility;
+  font-family: 'Lato';
+  font-size: 64.5%;
+}
+
+body {
+  max-width: 136.6rem;
+  margin-inline: 88px;
+  font-size: 1.6rem;
+}
+
+.app {
+  padding-top: 36px;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  font-size: 2rem;
+  align-items: center;
+}
+
+.main-hero {
+  font-size: 64px;
+  line-height: 99px;
+  width: 80%;
+  margin-top: 180px;
+}
+
+.button a {
+  display: inline-flex;
+  width: 164px;
+  height: 48px;
+  font-size: 1.6rem;
+  border: 2px solid rgb(107, 107, 107);
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-hero {
+  font-size: 1.6rem;
+  width: 60%;
+  font-weight: 400;
+}
+
+.about-title {
+  font-size: 64px;
+  line-height: 84px;
+  font-weight: normal;
+}
+
+.about-contact {
+  margin-top: 116px;
+}
