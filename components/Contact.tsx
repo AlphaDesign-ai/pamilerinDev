@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { FC } from 'react';
 import ArrowRightIcon from './ArrowRightIcon';
 import SocialMedia from './SocialMedia';
@@ -10,10 +11,12 @@ const Contact: FC = () => {
         here.
       </div>
       <div className="reach-out">
-        <a href="/" type="download" className="button">
-          <span>Drop a mail</span>
-          <ArrowRightIcon />
-        </a>
+        <Link href="/">
+          <a type="download" className="button">
+            <span>Drop a mail</span>
+            <ArrowRightIcon />
+          </a>
+        </Link>
         <SocialMedia />
       </div>
     </footer>
