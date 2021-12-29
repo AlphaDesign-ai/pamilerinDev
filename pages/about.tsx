@@ -11,7 +11,7 @@ const About: NextPage = () => {
       <div className="about-me">
         <h3>Story about me</h3>
         <p>
-          I am Lawal Yusuf, a Frontend developer based in
+          {`I am Lawal Yusuf, a Frontend developer based in
           Lagos, Nigeria . I'm passionate about building web
           product that are accessible and usable to everyone
           and taking accessibility to the front. I was born
@@ -22,7 +22,7 @@ const About: NextPage = () => {
           latter which I just finished this December 2021
           which I get to worked with different people from
           different culture and I was able to developed my
-          collaboration spirit.
+          collaboration spirit.`}
         </p>
         <div></div>
         <Contact />
