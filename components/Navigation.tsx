@@ -1,16 +1,23 @@
 import Link from 'next/link';
 import { FC } from 'react';
-import Button from './Button';
 
 const Navigation: FC = () => {
   return (
     <nav className="navigation">
-      <div>
+      <div className="logo-text">
         <Link href="/">PamilerinDev</Link>
       </div>
-      <Button route href="/about">
-        About
-      </Button>
+
+      <ul className="route-nav">
+        <li>
+          <Link href="/about">About</Link>
+        </li>
+        <li>
+          <a href="" type="download">
+            Resume
+          </a>
+        </li>
+      </ul>
     </nav>
   );
 };

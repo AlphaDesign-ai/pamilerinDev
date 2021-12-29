@@ -1,7 +1,7 @@
+import Contact from '../components/Contact';
 import Hero from '../components/Hero';
 
-const shortInfoAboutMe = `Hello, I am Yusuf,a frontend developer and web
-                          designer based in Lagos, Nigeria.`;
+const shortInfoAboutMe = `Hello, I am developer/designer passionate about web, based in Lagos, Nigeria`;
 
 export default function Home() {
   return (
@@ -10,6 +10,7 @@ export default function Home() {
         content={shortInfoAboutMe}
         className="main-hero"
       />
+      <Contact />
     </div>
   );
 }

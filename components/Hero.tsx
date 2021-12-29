@@ -6,7 +6,15 @@ interface HeroProps {
 }
 
 const Hero: FC<HeroProps> = ({ content, className }) => {
-  return <div className={className}>{content}</div>;
+  return (
+    <div className="main-hero">
+      <span>
+        Hello , I am developer/designer passionate about
+        web,
+      </span>
+      <span>&nbsp;based in Lagos, Nigeria</span>
+    </div>
+  );
 };
 
 export default Hero;
