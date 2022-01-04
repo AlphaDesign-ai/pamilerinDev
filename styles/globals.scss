@@ -21,6 +21,17 @@
   src: url('../public/fonts/Montserrat-Regular.otf');
   font-weight: 400;
 }
+@mixin responsive($width, $orientation) {
+  @media screen and (orientation: $orientation) and (max-width: $width) {
+    @content;
+  }
+}
+
+@mixin smartphone {
+  @include responsive(50.2em, portrait) {
+    @content;
+  }
+}
 
 a {
   color: inherit;
@@ -46,20 +57,30 @@ ul {
 
 body {
   max-width: 136.6rem;
-  margin-inline: 88px;
+  margin: 0 88px;
   font-size: 1.6rem;
+
+  @include smartphone {
+    margin: 0 24px;
+  }
 }
 
 .app {
   padding-top: 48px;
+  @include smartphone {
+    padding-top: 40px;
+  }
 }
 
 .navigation {
   display: flex;
   justify-content: space-between;
-  font-size: 2rem;
   align-items: center;
   font-family: Montserrat;
+
+  @include smartphone {
+    align-items: flex-start;
+  }
 }
 
 .logo-text {
@@ -70,18 +91,37 @@ body {
 .route-nav {
   display: flex;
   font-size: 1.6rem;
-  column-gap: 64px;
+
+  & > *:not(:last-child) {
+    margin-right: 64px;
+  }
+
+  @include smartphone {
+    flex-direction: column;
+    & > *:not(:last-child) {
+      margin-right: 0;
+      margin-bottom: 12px;
+    }
+  }
 }
 
 .main-hero {
   font-size: 8.1rem;
   line-height: 1.3;
   width: 90%;
-  margin-top: 180px;
+  margin-top: 164px;
   font-family: 'CormorantGaramond';
 
   span:last-child {
     color: rgb(172, 172, 172);
+  }
+
+  @include smartphone {
+    font-size: 5.4rem;
+    line-height: 1.5;
+    width: 100%;
+    margin-top: 116px;
+    overflow-wrap: break-word;
   }
 }
 
@@ -90,6 +130,10 @@ body {
   font-size: 1.4rem;
   font-family: Montserrat;
   margin-bottom: 48px;
+
+  @include smartphone {
+    margin-bottom: 32px;
+  }
 }
 
 .button {
@@ -109,19 +153,37 @@ body {
 
 .socialMedia {
   display: inline-flex;
-  column-gap: 40px;
+  margin-left: 56px;
+
+  & > *:not(:last-child) {
+    margin-right: 40px;
+  }
 }
 
 .footer {
-  margin-block: 96px 148px;
+  margin: 96px 0 148px 0;
+
+  @include smartphone {
+    margin: 80px 0;
+  }
 
   .button {
     margin-right: 48px;
+
+    @include smartphone {
+      margin-right: 0;
+      margin-bottom: 48px;
+    }
   }
 
   .reach-out {
     display: inline-flex;
     align-items: center;
+
+    @include smartphone {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 }
 
@@ -129,17 +191,31 @@ body {
   margin-top: 164px;
   width: 50%;
 
+  @include smartphone {
+    margin-top: 140px;
+    width: 100%;
+  }
+
   h3 {
     font-size: 8.1rem;
     line-height: 1.3;
     font-family: CormorantGaramond;
     font-weight: 400;
-    margin-bottom: 72px;
+    margin-bottom: 116px;
+    @include smartphone {
+      font-size: 5.4rem;
+      line-height: 1rem;
+      margin-bottom: 80px;
+    }
   }
 
   p {
     line-height: 2;
     font-family: Montserrat;
     color: #868686;
+  }
+
+  .footer {
+    margin-top: 64px;
   }
 }
