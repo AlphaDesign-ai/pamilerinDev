@@ -1,7 +1,11 @@
 import { FC } from 'react';
 
 const GithubIcon: FC = () => (
-  <span>
+  <a
+    href="https://github.com/AlphaDesign-ai"
+    target="_blank"
+    ref="noreferrer"
+  >
     <svg
       id="github-icon-1"
       xmlns="http://www.w3.org/2000/svg"
@@ -23,7 +27,7 @@ const GithubIcon: FC = () => (
         fill="#161614"
       />
     </svg>
-  </span>
+  </a>
 );
 
 export default GithubIcon;

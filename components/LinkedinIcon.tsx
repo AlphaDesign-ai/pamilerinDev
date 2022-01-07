@@ -1,7 +1,11 @@
 import { FC } from 'react';
 
 const LinkedinIcon: FC = () => (
-  <span>
+  <a
+    href="inkedin.com/in/itz-genius-746733225/"
+    target="_blank"
+    rel="noreferrer"
+  >
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="19.148"
@@ -14,7 +18,7 @@ const LinkedinIcon: FC = () => (
         transform="translate(0 -5)"
       />
     </svg>
-  </span>
+  </a>
 );
 
 export default LinkedinIcon;
