@@ -1,18 +1,24 @@
 import { FC } from 'react';
 
-interface HeroProps {
-  content: string;
-  className: string;
-}
-
-const Hero: FC<HeroProps> = () => {
+const Hero: FC = () => {
   return (
     <div className="main-hero">
-      <span>
-        Hello , I am developer/designer passionate about
-        web,
-      </span>
-      <span> based in Lagos, Nigeria</span>
+      <p>
+        Hello, I am Lawal Yusuf, A frontend developer/designer based in Lagos,
+        Nigeria. I'm passionate about building web profuct that are accessible
+        usable to everyone and taking accessibility at it core.
+      </p>
+      <p>
+        Also I am a Electrical and Electronic undergraduate, having interned
+        with about two start up over the past One year. "HNG" and "sidehustle"
+        internship.The latter which I just finihed last december where I was
+        able to work different person which boosted my team spirit.
+      </p>
+
+      <p>
+        I have being working professionally with Javascript for the past 2
+        years.
+      </p>
     </div>
   );
 };

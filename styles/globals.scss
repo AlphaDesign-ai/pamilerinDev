@@ -1,13 +1,15 @@
 @font-face {
-  font-family: CormorantGaramond;
-  src: url(../public/fonts/CormorantGaramond-Medium.ttf);
-  font-weight: 500;
+  font-family: Orelo;
+  src: url('../public/fonts/Orelo\ SemiWide\ Light.otf');
+  font-weight: 200;
+  font-style: normal;
 }
 
 @font-face {
-  font-family: CormorantGaramond;
-  src: url('../public/fonts/CormorantGaramond-Regular.ttf');
-  font-weight: 400;
+  font-family: Orelo;
+  src: url('../public/fonts/Orelo\ SemiWide\ Light\ Italic.otf');
+  font-weight: 200;
+  font-style: italic;
 }
 
 @font-face {
@@ -33,9 +35,18 @@
   }
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+:root {
+  text-rendering: optimizeLegibility;
+  font-size: 64.5%;
+  --background-colour: #f4f8f9;
+  --primary-font: Orelo;
+  --body-font: Montserrat;
+  --layout-width: 136.6rem;
+  --grid-column: repeat(12, 1fr);
+  --span-full-column: 1/-1;
+  --grid-column-gutter: 16px;
+  --text-colour: #141414;
+  --grey: #a4a4a5;
 }
 
 *,
@@ -46,26 +57,48 @@ a {
   padding: 0;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
 ul {
   list-style: none;
 }
 
-:root {
-  text-rendering: optimizeLegibility;
-  font-size: 64.5%;
+:focus {
+  outline: none;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  max-width: 136.6rem;
-  margin: 0 88px;
-  font-size: 1.6rem;
-
+  max-width: var(--layout-width);
+  margin: 0 auto;
+  color: var(--text-colour);
+  background-color: var(--background-colour);
   @include smartphone {
     margin: 0 24px;
   }
+  padding-bottom: 240px;
+}
+
+.grey-font {
+  color: var(--grey);
 }
 
 .app {
+  display: grid;
+  grid-template-columns: var(--grid-column);
+  column-gap: var(--grid-column-gutter);
   padding-top: 48px;
   @include smartphone {
     padding-top: 40px;
@@ -73,6 +106,7 @@ body {
 }
 
 .navigation {
+  grid-column: var(--span-full-column);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -81,11 +115,6 @@ body {
   @include smartphone {
     align-items: flex-start;
   }
-}
-
-.logo-text {
-  font-size: 2.4rem;
-  font-weight: 500;
 }
 
 .route-nav {
@@ -105,117 +134,78 @@ body {
   }
 }
 
-.main-hero {
-  font-size: 8.1rem;
-  line-height: 1.3;
-  width: 90%;
-  margin-top: 164px;
-  font-family: 'CormorantGaramond';
+.user-intro {
+  grid-column: 2/-1;
+  font-family: var(--primary-font);
+  margin-top: 128px;
 
-  span:last-child {
-    color: rgb(172, 172, 172);
+  & h1 {
+    font-size: 21.4rem;
+    line-height: 1;
   }
 
-  @include smartphone {
-    font-size: 5.4rem;
-    line-height: 1.5;
-    width: 100%;
-    margin-top: 116px;
-    overflow-wrap: break-word;
+  & span {
+    display: block;
   }
-}
 
-.message {
-  text-transform: uppercase;
-  font-size: 1.4rem;
-  font-family: Montserrat;
-  margin-bottom: 48px;
-
-  @include smartphone {
-    margin-bottom: 32px;
+  & .dev {
+    font-style: italic;
   }
 }
 
-.button {
-  display: inline-flex;
-  width: 264px;
-  height: 72px;
-  font-size: 1.6rem;
-  border: 2px solid rgb(107, 107, 107);
-  justify-content: center;
-  align-items: center;
-  border: 2px solid #000;
+.main-content {
+  grid-column: 2/-1;
+  margin-top: 240px;
+  margin-bottom: 164px;
 
-  span:first-child {
-    margin-right: 8px;
+  & > .main-hero {
+    font-family: var(--body-font);
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    line-height: 2;
+    width: 628px;
+    margin: 0 auto;
   }
-}
 
-.socialMedia {
-  display: inline-flex;
-  margin-left: 56px;
-
-  & > *:not(:last-child) {
-    margin-right: 40px;
+  & p:not(:last-of-type) {
+    margin-bottom: 24px;
   }
 }
 
 .footer {
-  margin: 96px 0 148px 0;
+  grid-column: var(--span-full-column);
+  text-align: center;
 
-  @include smartphone {
-    margin: 80px 0;
-  }
-
-  .button {
-    margin-right: 48px;
-
-    @include smartphone {
-      margin-right: 0;
-      margin-bottom: 48px;
-    }
-  }
-
-  .reach-out {
-    display: inline-flex;
-    align-items: center;
-
-    @include smartphone {
-      flex-direction: column;
-      align-items: flex-start;
-    }
+  > .navigate {
+    margin-top: 240px;
   }
 }
 
-.about-me {
-  margin-top: 164px;
-  width: 50%;
+.user-button {
+  border: 2px solid var(--text-colour);
+  height: 72px;
+  width: 278px;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  word-spacing: 2px;
 
-  @include smartphone {
-    margin-top: 140px;
-    width: 100%;
+  & .user-button__icon {
+    display: inline-block;
+    margin-left: 24px;
+  }
+}
+
+.navigate-button {
+  display: inline-flex;
+  flex-direction: column;
+  cursor: pointer;
+  & > *:not(:last-child) {
+    margin-bottom: 24px;
   }
 
-  h3 {
-    font-size: 8.1rem;
-    line-height: 1.3;
-    font-family: CormorantGaramond;
-    font-weight: 400;
-    margin-bottom: 116px;
-    @include smartphone {
-      font-size: 5.4rem;
-      line-height: 1rem;
-      margin-bottom: 80px;
-    }
-  }
-
-  p {
-    line-height: 2;
-    font-family: Montserrat;
-    color: #868686;
-  }
-
-  .footer {
-    margin-top: 64px;
+  & > :last-child {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    text-decoration: underline;
   }
 }

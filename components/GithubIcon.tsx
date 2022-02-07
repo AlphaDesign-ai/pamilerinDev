@@ -4,7 +4,7 @@ const GithubIcon: FC = () => (
   <a
     href="https://github.com/AlphaDesign-ai"
     target="_blank"
-    ref="noreferrer"
+    // ref="noreferrer"
   >
     <svg
       id="github-icon-1"
