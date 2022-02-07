@@ -18,6 +18,12 @@
   font-weight: 400;
 }
 
+@font-face {
+  font-family: WorkSans;
+  src: url('../public/fonts/WorkSans-Light.ttf');
+  font-weight: 200;
+}
+
 @mixin responsive($width, $orientation) {
   @media screen and (orientation: $orientation) and (max-width: $width) {
     @content;
@@ -144,21 +150,30 @@ body {
   & h1 {
     font-size: 18.4rem;
     font-weight: 200;
-    line-height: 1.1;
+    line-height: 1;
 
     @include smartphone {
       font-size: 6.4rem;
       line-height: 1.4;
     }
+
+    span:last-child {
+      font-style: italic;
+      color: var(--text-colour);
+    }
   }
 
   & span {
     display: block;
+    font-family: var(--body-font);
+    font-weight: 200;
   }
 
   & .dev > span {
     display: inline-block;
     font-style: italic;
+    font-family: var(--primary-font);
+    color: var(--text-colour);
   }
 }
 

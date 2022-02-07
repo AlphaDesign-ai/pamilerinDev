@@ -6,11 +6,11 @@ export default function Home() {
   return (
     <>
       <header className="user-intro">
-        <h1>
+        <h1 className="grey-font">
           <span className="dev">
             I am a <span>web</span> Developer
           </span>
-          <span className="grey-font ">&nbsp;&nbsp;&nbsp;&nbsp;/Designer.</span>
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;/Designer.</span>
         </h1>
       </header>
       <main className="main-content">
