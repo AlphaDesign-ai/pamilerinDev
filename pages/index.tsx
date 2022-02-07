@@ -7,9 +7,10 @@ export default function Home() {
     <>
       <header className="user-intro">
         <h1>
-          <span className="web">Web/</span>
-          <span className="dev">Developer</span>
-          <span className="grey-font ">Designer.</span>
+          <span className="dev">
+            I am a <span>web</span> Developer
+          </span>
+          <span className="grey-font ">&nbsp;&nbsp;&nbsp;&nbsp;/Designer.</span>
         </h1>
       </header>
       <main className="main-content">

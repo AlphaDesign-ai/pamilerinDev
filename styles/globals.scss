@@ -1,28 +1,23 @@
 @font-face {
-  font-family: Orelo;
-  src: url('../public/fonts/Orelo\ SemiWide\ Light.otf');
+  font-family: Ogg;
+  src: url('../public/fonts/Ogg-Roman.otf');
   font-weight: 200;
   font-style: normal;
 }
 
 @font-face {
-  font-family: Orelo;
-  src: url('../public/fonts/Orelo\ SemiWide\ Light\ Italic.otf');
+  font-family: Ogg;
+  src: url('../public/fonts/Ogg-Italic.otf');
   font-weight: 200;
   font-style: italic;
 }
 
 @font-face {
-  font-family: Montserrat;
-  src: url('../public/fonts/Montserrat-SemiBold.otf');
-  font-weight: 600;
-}
-
-@font-face {
-  font-family: Montserrat;
-  src: url('../public/fonts/Montserrat-Regular.otf');
+  font-family: WorkSans;
+  src: url('../public/fonts/WorkSans-Regular.ttf');
   font-weight: 400;
 }
+
 @mixin responsive($width, $orientation) {
   @media screen and (orientation: $orientation) and (max-width: $width) {
     @content;
@@ -39,8 +34,8 @@
   text-rendering: optimizeLegibility;
   font-size: 64.5%;
   --background-colour: #f4f8f9;
-  --primary-font: Orelo;
-  --body-font: Montserrat;
+  --primary-font: Ogg;
+  --body-font: WorkSans;
   --layout-width: 136.6rem;
   --grid-column: repeat(12, 1fr);
   --span-full-column: 1/-1;
@@ -85,10 +80,14 @@ body {
   margin: 0 auto;
   color: var(--text-colour);
   background-color: var(--background-colour);
+
   @include smartphone {
     margin: 0 24px;
   }
   padding-bottom: 240px;
+  @include smartphone {
+    padding-bottom: 140px;
+  }
 }
 
 .grey-font {
@@ -110,7 +109,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: Montserrat;
+  font-family: var(--body-font);
 
   @include smartphone {
     align-items: flex-start;
@@ -122,53 +121,74 @@ body {
   font-size: 1.6rem;
 
   & > *:not(:last-child) {
-    margin-right: 64px;
+    margin-right: 40px;
   }
 
   @include smartphone {
-    flex-direction: column;
     & > *:not(:last-child) {
-      margin-right: 0;
-      margin-bottom: 12px;
+      margin-right: 32px;
     }
   }
 }
 
 .user-intro {
-  grid-column: 2/-1;
+  grid-column: 2/ -1;
   font-family: var(--primary-font);
-  margin-top: 128px;
+  margin-top: 148px;
+
+  @include smartphone {
+    margin-top: 116px;
+    grid-column: var(--span-full-column);
+  }
 
   & h1 {
-    font-size: 21.4rem;
-    line-height: 1;
+    font-size: 18.4rem;
+    font-weight: 200;
+    line-height: 1.1;
+
+    @include smartphone {
+      font-size: 6.4rem;
+      line-height: 1.4;
+    }
   }
 
   & span {
     display: block;
   }
 
-  & .dev {
+  & .dev > span {
+    display: inline-block;
     font-style: italic;
   }
 }
 
 .main-content {
   grid-column: 2/-1;
-  margin-top: 240px;
-  margin-bottom: 164px;
+  margin-top: 248px;
+  margin-bottom: 180px;
+
+  @include smartphone {
+    grid-column: var(--span-full-column);
+    margin-top: 196px;
+    margin-bottom: 164px;
+  }
 
   & > .main-hero {
     font-family: var(--body-font);
-    font-size: 1.8rem;
+    font-size: 2rem;
     text-transform: uppercase;
-    line-height: 2;
-    width: 628px;
+    line-height: 2.4;
+    width: 688px;
     margin: 0 auto;
+
+    @include smartphone {
+      width: 100%;
+      font-size: 1.8rem;
+    }
   }
 
   & p:not(:last-of-type) {
-    margin-bottom: 24px;
+    margin-bottom: 48px;
   }
 }
 
@@ -177,7 +197,11 @@ body {
   text-align: center;
 
   > .navigate {
-    margin-top: 240px;
+    margin-top: 180px;
+
+    @include smartphone {
+      margin-top: 164px;
+    }
   }
 }
 
