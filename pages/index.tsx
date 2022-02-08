@@ -6,11 +6,12 @@ export default function Home() {
   return (
     <>
       <header className="user-intro">
-        <h1 className="grey-font">
-          <span className="dev">
-            I am a <span>web</span> Developer
+        <h1>
+          <span>Creative</span>
+          <span>
+            <span className="grey-font">Developer</span> <span>&</span>
           </span>
-          <span>/Designer.</span>
+          <span className="grey-font">/Designer.</span>
         </h1>
       </header>
       <main className="main-content">

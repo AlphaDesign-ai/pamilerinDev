@@ -143,31 +143,36 @@ body {
   margin-top: 148px;
 
   @include smartphone {
-    margin-top: 116px;
+    margin-top: 124px;
     grid-column: var(--span-full-column);
   }
 
   & h1 {
-    font-size: 18.4rem;
+    font-size: 13.4rem;
     font-weight: 200;
-    line-height: 1;
+    line-height: 1.2;
 
     @include smartphone {
       font-size: 6.4rem;
       line-height: 1.4;
     }
-
-    > span:last-child {
-      font-style: italic;
-      color: var(--text-colour);
-      margin-left: 20%;
-    }
   }
 
-  & span {
+  & h1 > span {
     display: block;
-    font-family: var(--body-font);
     font-weight: 200;
+
+    &:first-child {
+      font-style: italic;
+    }
+
+    &:nth-child(2) {
+      margin-left: 10%;
+    }
+
+    &:last-child {
+      margin-left: 30%;
+    }
   }
 
   & .dev > span {
@@ -181,12 +186,12 @@ body {
 .main-content {
   grid-column: 2/-1;
   margin-top: 248px;
-  margin-bottom: 180px;
+  margin-bottom: 196px;
 
   @include smartphone {
     grid-column: var(--span-full-column);
-    margin-top: 196px;
-    margin-bottom: 164px;
+    margin-top: 180px;
+    margin-bottom: 140px;
   }
 
   & > .main-hero {
@@ -213,10 +218,10 @@ body {
   text-align: center;
 
   > .navigate {
-    margin-top: 180px;
+    margin-top: 240px;
 
     @include smartphone {
-      margin-top: 164px;
+      margin-top: 180px;
     }
   }
 }
