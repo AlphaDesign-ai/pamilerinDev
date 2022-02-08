@@ -8,7 +8,7 @@ const Navigation: FC = () => {
       <ul className="route-nav">
         <li>
           <a
-            href="https:/github.com/AlphaDesign-ai"
+            href="https://github.com/AlphaDesign-ai"
             target="_blank"
             rel="noreferrer"
           >
