@@ -157,9 +157,10 @@ body {
       line-height: 1.4;
     }
 
-    span:last-child {
+    > span:last-child {
       font-style: italic;
       color: var(--text-colour);
+      margin-left: 20%;
     }
   }
 
@@ -237,6 +238,7 @@ body {
 .navigate-button {
   display: inline-flex;
   flex-direction: column;
+  align-items: center;
   cursor: pointer;
   & > *:not(:last-child) {
     margin-bottom: 24px;

@@ -10,7 +10,7 @@ export default function Home() {
           <span className="dev">
             I am a <span>web</span> Developer
           </span>
-          <span>&nbsp;&nbsp;&nbsp;&nbsp;/Designer.</span>
+          <span>/Designer.</span>
         </h1>
       </header>
       <main className="main-content">
