@@ -4,9 +4,13 @@ import Button, { TopNavigateButton } from './Button';
 const Contact: FC = () => {
   return (
     <footer className="footer">
-      <div className="mail-button">
+      <a
+        className="mail-button"
+        href="mailto:holluwapamilerin1@gmail.com"
+        rel="noreferrer"
+      >
         <Button>Drop a mail</Button>
-      </div>
+      </a>
       <div className="navigate">
         <TopNavigateButton />
       </div>
