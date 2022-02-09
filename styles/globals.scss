@@ -36,6 +36,12 @@
   }
 }
 
+@mixin smaller-smartphone {
+  @include responsive(39em, portrait) {
+    @content;
+  }
+}
+
 :root {
   text-rendering: optimizeLegibility;
   font-size: 64.5%;
@@ -149,6 +155,10 @@ body {
     grid-column: var(--span-full-column);
   }
 
+  @include smaller-smartphone {
+    margin-top: 96px;
+  }
+
   & h1 {
     font-size: 13.4rem;
     font-weight: 200;
@@ -157,6 +167,15 @@ body {
     @include smartphone {
       font-size: 6.4rem;
       line-height: 1.4;
+    }
+
+    @include smaller-smartphone {
+      font-size: 5rem;
+      line-height: 1.5;
+    }
+
+    @include responsive(80em, portrait) {
+      font-size: 8.4rem;
     }
   }
 
@@ -173,7 +192,7 @@ body {
     }
 
     &:last-child {
-      margin-left: 30%;
+      margin-left: 20%;
     }
   }
 
@@ -194,6 +213,10 @@ body {
     grid-column: var(--span-full-column);
     margin-top: 180px;
     margin-bottom: 140px;
+  }
+
+  @include smaller-smartphone {
+    margin-top: 128px;
   }
 
   & > .main-hero {
@@ -226,6 +249,10 @@ body {
       margin-top: 180px;
     }
   }
+
+  .mail-button {
+    display: block;
+  }
 }
 
 .user-button {
@@ -235,6 +262,10 @@ body {
   font-size: 1.5rem;
   text-transform: uppercase;
   word-spacing: 2px;
+
+  @include smartphone {
+    width: 100%;
+  }
 
   & .user-button__icon {
     display: inline-block;
