@@ -45,7 +45,7 @@
 :root {
   text-rendering: optimizeLegibility;
   font-size: 64.5%;
-  --background-colour: #f4f8f9;
+  --background-colour: #f5fcfd;
   --primary-font: Ogg;
   --body-font: WorkSans;
   --layout-width: 136.6rem;
@@ -164,18 +164,18 @@ body {
     font-weight: 200;
     line-height: 1.2;
 
+    @include responsive(80em, portrait) {
+      font-size: 8.4rem;
+    }
+
     @include smartphone {
       font-size: 6.4rem;
       line-height: 1.4;
     }
 
     @include smaller-smartphone {
-      font-size: 5rem;
+      font-size: 5.2rem;
       line-height: 1.5;
-    }
-
-    @include responsive(80em, portrait) {
-      font-size: 8.4rem;
     }
   }
 
@@ -221,15 +221,15 @@ body {
 
   & > .main-hero {
     font-family: var(--body-font);
-    font-size: 2rem;
+    font-size: 1.8rem;
     text-transform: uppercase;
-    line-height: 2.4;
+    line-height: 2;
     width: 688px;
     margin: 0 auto;
 
     @include smartphone {
       width: 100%;
-      font-size: 1.8rem;
+      font-size: 1.6rem;
     }
   }
 
