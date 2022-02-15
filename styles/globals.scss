@@ -169,12 +169,12 @@ body {
     }
 
     @include smartphone {
-      font-size: 6.4rem;
+      font-size: 5.4rem;
       line-height: 1.4;
     }
 
     @include smaller-smartphone {
-      font-size: 5rem;
+      font-size: 4.8rem;
     }
   }
 
